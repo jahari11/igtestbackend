@@ -32,4 +32,8 @@ app.use("/api/user", userRoutes);
 app.use("/api/location", locationRoutes);
 app.use("/api/dealer", dealerRoutes);
 
+app.get('/', (req, res) => {
+  res.send('Server up')
+});
+
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
